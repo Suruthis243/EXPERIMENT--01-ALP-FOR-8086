@@ -138,6 +138,85 @@ hlt
 ## Output  
 <img width="1895" height="1017" alt="Screenshot 2026-01-30 184747" src="https://github.com/user-attachments/assets/76e48278-3d3e-4be1-b07d-3d7b871f908b" />
 
+## AND for 8 bit alp:
+```
+org 100h
+
+mov ax,[1100h]
+
+mov bx,[1102h]
+AND ax,bx
+mov [1200h],ax
+hlt
+
+ret
+```
+
+## Output  
+
+<img width="1759" height="1123" alt="image" src="https://github.com/user-attachments/assets/fc89dfee-a4e4-4d54-a49f-01b194cad94a" />
+
+## OR for 8 bit alp:
+```
+org 100h
+
+mov ax,[1100h]
+
+mov bx,[1102h]
+OR ax,bx
+mov [1200h],ax
+hlt
+```
+
+## Output  
+
+<img width="1651" height="1090" alt="image" src="https://github.com/user-attachments/assets/1ae02cc8-7d38-4ce3-9772-a9c3a9c25dde" />
+
+## NOT for 8 bit alp:
+```
+org 100h
+mov ax,[1100h]
+NOT ax
+mov [1200h],ax
+hlt
+```
+
+## Output  
+<img width="1110" height="654" alt="Screenshot 2026-03-11 133307" src="https://github.com/user-attachments/assets/35fcc5f2-1e1a-464a-8a82-b05fa2ff74f1" />
+
+## NAND for 8 bit alp:
+
+```
+org 100h
+mov ax,[1100h]
+mov bx,[1102h]
+AND ax,bx
+NOT al
+mov [1200h],ax
+hlt
+```
+
+## Output  
+<img width="1131" height="651" alt="Screenshot 2026-03-11 133837" src="https://github.com/user-attachments/assets/dceef338-6799-498b-994d-6bd40e2fc0c4" />
+
+
+## NOR for 8 bit alp:
+```
+org 100h
+
+mov ax,[1100h]
+
+mov bx,[1102h]
+OR ax,bx
+NOT ax
+mov [1200h],ax
+hlt
+```
+
+## Output  
+<img width="1131" height="651" alt="Screenshot 2026-03-11 133837" src="https://github.com/user-attachments/assets/79101e77-6302-41fc-aa5f-43c7062f6f85" />
+
+
 ## Result :
  
 The execution of ALP on fundamental arithmetic and logical operations is successfully completed.
